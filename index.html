@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MMonark Digital — Canadian Digital Agency</title>
+  <meta name="description" content="We partner with Canadian businesses to build digital presence that commands attention, earns trust, and drives real, measurable growth."/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <a href="index.html" class="logo">
+      <div class="logo-icon">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+          <rect width="32" height="32" rx="4" fill="#C9A84C" opacity="0.15"/>
+          <path d="M6 24V8l6 10 4-6 4 6 6-10v16" stroke="#C9A84C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div class="logo-text">
+        <span class="logo-name"><span class="logo-mm">MM</span>onark</span>
+        <span class="logo-sub">DIGITAL</span>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#services">SERVICES</a></li>
+      <li><a href="#process">PROCESS</a></li>
+      <li><a href="#results">RESULTS</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li id="nav-login-li"><a href="login.html">LOGIN</a></li>
+    </ul>
+    <a href="#" class="btn-primary" id="nav-cta" onclick="openModal()">START A PROJECT</a>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobile-menu">
+    <ul>
+      <li><a href="#services" onclick="closeMobile()">SERVICES</a></li>
+      <li><a href="#process" onclick="closeMobile()">PROCESS</a></li>
+      <li><a href="#results" onclick="closeMobile()">RESULTS</a></li>
+      <li><a href="#faq" onclick="closeMobile()">FAQ</a></li>
+      <li><a href="login.html" onclick="closeMobile()">LOGIN</a></li>
+    </ul>
+    <a href="#" class="btn-primary" onclick="openModal(); closeMobile()">START A PROJECT</a>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <div class="hero-left">
+        <p class="eyebrow"><span class="eyebrow-line"></span> CANADIAN DIGITAL AGENCY · EST. 2024</p>
+        <h1 class="hero-heading">
+          <span class="line-1 fade-up">Your brand.</span>
+          <span class="line-2 fade-up delay-1"><em>Your reign.</em></span>
+          <span class="line-3 fade-up delay-2">Our mission.</span>
+        </h1>
+        <p class="hero-sub fade-up delay-3">We partner with Canadian businesses to build digital presence that commands attention, earns trust, and drives real, measurable growth.</p>
+        <div class="hero-ctas fade-up delay-4">
+          <a href="#" class="btn-primary" onclick="openModal()">START YOUR PROJECT</a>
+          <a href="#services" class="btn-ghost">EXPLORE SERVICES ↓</a>
+        </div>
+      </div>
+      <div class="hero-right fade-up delay-2">
+        <div class="hero-card main-card">
+          <p class="card-label">CURRENT ENGAGEMENT</p>
+          <p class="card-stat">+340%</p>
+          <p class="card-sublabel">avg. engagement growth · last 90 days</p>
+          <ul class="service-list">
+            <li><span class="dot dot-blue"></span> Web Design &amp; Development</li>
+            <li><span class="dot dot-yellow"></span> Paid Advertising</li>
+            <li><span class="dot dot-teal"></span> Search Engine Optimization</li>
+            <li><span class="dot dot-yellow"></span> Marketing Automation</li>
+            <li><span class="dot dot-red"></span> Strategic Consulting</li>
+          </ul>
+        </div>
+        <div class="hero-card mini-card response-card">
+          <p class="card-label">RESPONSE</p>
+          <p class="card-stat-sm">24hr</p>
+          <p class="card-sublabel">Guaranteed 🇨🇦</p>
+        </div>
+        <div class="hero-card mini-card launch-card">
+          <p class="card-label">AVG. LAUNCH</p>
+          <p class="card-stat-sm gold">2–3 weeks</p>
+          <p class="card-sublabel">From kickoff to live</p>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <span></span>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="section" id="services">
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow"><span class="eyebrow-line"></span> WHAT WE DO</p>
+        <h2>Full-stack digital <em>dominance.</em></h2>
+        <p class="section-sub">Every service we offer is designed to compound — the more you build with us, the stronger your position becomes.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card reveal">
+          <div class="service-icon">🌐</div>
+          <h3>Web Design &amp; Development</h3>
+          <p>High-converting websites built for speed, trust, and search visibility. Not templates — custom-built to represent your brand.</p>
+          <ul class="service-features">
+            <li>Custom design, mobile-first</li>
+            <li>SEO-ready from day one</li>
+            <li>2–3 week launch timeline</li>
+          </ul>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon">📈</div>
+          <h3>Paid Ads</h3>
+          <p>Google and Meta campaigns built to convert. We manage every dollar like it's our own — because your results are our reputation.</p>
+          <ul class="service-features">
+            <li>Google &amp; Meta campaigns</li>
+            <li>Full funnel strategy</li>
+            <li>Weekly reporting</li>
+          </ul>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon">🔍</div>
+          <h3>Search Engine Optimization</h3>
+          <p>Long-term organic growth that compounds. We build the kind of authority that keeps paying dividends for years.</p>
+          <ul class="service-features">
+            <li>Technical SEO audits</li>
+            <li>Content strategy</li>
+            <li>Local &amp; national rankings</li>
+          </ul>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon">⚡</div>
+          <h3>Marketing Automation</h3>
+          <p>Stop leaving money on the table. We build automated systems that nurture, convert, and retain customers while you sleep.</p>
+          <ul class="service-features">
+            <li>Email sequences</li>
+            <li>CRM integration</li>
+            <li>Lead scoring &amp; nurture</li>
+          </ul>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon">🎯</div>
+          <h3>Strategic Consulting</h3>
+          <p>Not sure where to start? We'll audit your current digital presence and hand you a clear, prioritized roadmap.</p>
+          <ul class="service-features">
+            <li>Digital presence audit</li>
+            <li>Competitor analysis</li>
+            <li>90-day action plan</li>
+          </ul>
+        </div>
+        <div class="service-card reveal service-card-cta">
+          <p class="card-label">READY TO START?</p>
+          <h3>The full package — everything working together.</h3>
+          <p>For businesses serious about dominating their market online.</p>
+          <a href="#" class="btn-primary" onclick="openModal()">GET YOUR PROPOSAL</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="section section-dark" id="process">
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow"><span class="eyebrow-line"></span> HOW IT WORKS</p>
+        <h2>From kickoff to <em>live in weeks.</em></h2>
+        <p class="section-sub">A clear, collaborative process — no surprises, no delays, no excuses.</p>
+      </div>
+      <div class="process-steps">
+        <div class="process-step reveal">
+          <div class="step-number">01</div>
+          <div class="step-content">
+            <h3>Strategy Call</h3>
+            <p>30 minutes. We learn your business, your goals, your competition. You leave with clarity — and we leave with everything we need to build your proposal.</p>
+          </div>
+        </div>
+        <div class="process-step reveal">
+          <div class="step-number">02</div>
+          <div class="step-content">
+            <h3>Custom Proposal</h3>
+            <p>Within 48 hours, you receive a detailed scope, timeline, and investment breakdown — built specifically for your business, not copy-pasted from a template.</p>
+          </div>
+        </div>
+        <div class="process-step reveal">
+          <div class="step-number">03</div>
+          <div class="step-content">
+            <h3>Design &amp; Build</h3>
+            <p>You stay in the loop at every stage. Weekly check-ins, clear milestones, and a shared dashboard so you always know where things stand.</p>
+          </div>
+        </div>
+        <div class="process-step reveal">
+          <div class="step-number">04</div>
+          <div class="step-content">
+            <h3>Launch &amp; Grow</h3>
+            <p>We don't disappear after launch. Ongoing support, reporting, and optimization to ensure your digital presence keeps compounding.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESULTS -->
+  <section class="section" id="results">
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow"><span class="eyebrow-line"></span> PROOF IT WORKS</p>
+        <h2>Numbers don't <em>lie.</em></h2>
+        <p class="section-sub">Real results from real Canadian businesses. No cherry-picked outliers — this is our standard.</p>
+      </div>
+      <div class="stats-row reveal">
+        <div class="stat-block">
+          <p class="stat-num">+340%</p>
+          <p class="stat-label">Avg. Engagement Growth</p>
+          <p class="stat-sub">Last 90 days across active clients</p>
+        </div>
+        <div class="stat-block">
+          <p class="stat-num">2–3 wks</p>
+          <p class="stat-label">Average Launch Time</p>
+          <p class="stat-sub">From kickoff call to live website</p>
+        </div>
+        <div class="stat-block">
+          <p class="stat-num">24hr</p>
+          <p class="stat-label">Response Guarantee</p>
+          <p class="stat-sub">Every message, every time 🇨🇦</p>
+        </div>
+        <div class="stat-block">
+          <p class="stat-num">100%</p>
+          <p class="stat-label">Canadian Businesses</p>
+          <p class="stat-sub">We only work with Canadian clients</p>
+        </div>
+      </div>
+      <div class="testimonials reveal">
+        <div class="testimonial-card">
+          <p class="testimonial-text">"MMonark built our website and set up our Google Ads in under 3 weeks. We saw leads within the first 48 hours of launch. Absolutely worth every penny."</p>
+          <p class="testimonial-author">— Local Business Owner, Saskatchewan</p>
+        </div>
+        <div class="testimonial-card">
+          <p class="testimonial-text">"Mac is responsive, honest, and delivers. No fluff, no overselling — just results. Our organic traffic has tripled in 4 months."</p>
+          <p class="testimonial-author">— Service Business, Western Canada</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section section-dark" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow"><span class="eyebrow-line"></span> FAQ</p>
+        <h2>Questions we <em>actually get.</em></h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item reveal">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            How long does a website take? <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Most websites launch within 2–3 weeks of kickoff. Complex builds may take 4–6 weeks. We give you a firm timeline before any work begins — no surprises.</p>
+          </div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Do you work with businesses outside of Weyburn? <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Absolutely. We work with Canadian businesses from coast to coast. Everything is done remotely — video calls, shared dashboards, and fast communication.</p>
+          </div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            What does it cost? <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Every project is scoped individually. Websites typically start around $2,500. Ad management and SEO are monthly retainers. We'll give you a clear number on our first call — no vague "it depends" answers.</p>
+          </div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            What if I'm not happy with the work? <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>We do revision rounds until it's right. We're not done until you're genuinely proud of what we built together. Our reputation depends on your results.</p>
+          </div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Can you handle ongoing support after launch? <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Yes — and we encourage it. Websites need updates, ads need optimization, and SEO compounds over time. We offer flexible ongoing support packages.</p>
+          </div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            How do I get started? <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Book a free 30-minute strategy call. No commitment, no pitch — just an honest conversation about your business and what digital can do for it.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA SECTION -->
+  <section class="section cta-section">
+    <div class="container">
+      <p class="eyebrow center"><span class="eyebrow-line"></span> READY? <span class="eyebrow-line"></span></p>
+      <h2 class="cta-heading">The businesses that win online<br><em>started with one call.</em></h2>
+      <p class="cta-sub">No commitment. No sales pressure. Just 30 minutes with Mac to talk honestly about your business and what digital can do for it.</p>
+      <a href="#" class="btn-primary btn-large" onclick="openModal()">BOOK YOUR FREE STRATEGY CALL</a>
+      <p class="cta-email">or reach us directly at <a href="mailto:MMonark@Digital.com" class="gold-link">MMonark@Digital.com</a></p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <div class="logo-icon">
+            <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
+              <rect width="32" height="32" rx="4" fill="#C9A84C" opacity="0.15"/>
+              <path d="M6 24V8l6 10 4-6 4 6 6-10v16" stroke="#C9A84C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="logo-text">
+            <span class="logo-name"><span class="logo-mm">MM</span>onark</span>
+            <span class="logo-sub">DIGITAL</span>
+          </div>
+        </a>
+        <p class="footer-tagline">We grow Canadian businesses. From Weyburn to wherever your customers are — we build digital presence that earns trust and drives growth.</p>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col-title">SERVICES</p>
+        <ul>
+          <li><a href="#services">Web Design</a></li>
+          <li><a href="#services">Paid Ads</a></li>
+          <li><a href="#services">SEO</a></li>
+          <li><a href="#services">Automation</a></li>
+          <li><a href="#services">Consulting</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col-title">COMPANY</p>
+        <ul>
+          <li><a href="#process">Our Process</a></li>
+          <li><a href="#results">Client Results</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#" onclick="openModal()">Start a Project</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col-title">CONTACT</p>
+        <ul>
+          <li><a href="mailto:MMonark@Digital.com">MMonark@Digital.com</a></li>
+          <li><span>24hr response time</span></li>
+          <li><span>Weyburn, SK 🇨🇦</span></li>
+        </ul>
+        <div class="footer-login-links">
+          <a href="login.html">Business Login</a>
+          <a href="login.html">Admin Access</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 MMonark Digital. All rights reserved. Built with purpose by Mac Malana.</p>
+      <p class="proudly-canadian">PROUDLY CANADIAN 🇨🇦</p>
+    </div>
+  </footer>
+
+  <!-- MODAL -->
+  <div class="modal-overlay" id="modal-overlay" onclick="closeModalOutside(event)">
+    <div class="modal" id="modal">
+      <button class="modal-close" onclick="closeModal()">✕</button>
+      <div class="modal-inner">
+        <p class="modal-eyebrow">FREE STRATEGY CALL</p>
+        <h2 class="modal-title">Let's talk about<br><em>your growth.</em></h2>
+        <p class="modal-desc">30 minutes. Honest conversation. Zero obligation. We'll tell you exactly what will work for your business.</p>
+        <div class="modal-bullets">
+          <p>✦ Free strategy session — no sales pitch</p>
+          <p>✦ Honest audit of your current digital presence</p>
+          <p>✦ Custom proposal delivered within 48 hours</p>
+        </div>
+        <form class="modal-form" onsubmit="submitForm(event)">
+          <div class="form-group">
+            <label>YOUR NAME</label>
+            <input type="text" placeholder="Jane Smith" required/>
+          </div>
+          <div class="form-group">
+            <label>BUSINESS EMAIL</label>
+            <input type="email" placeholder="jane@yourbusiness.ca" required/>
+          </div>
+          <div class="form-group">
+            <label>PHONE (OPTIONAL)</label>
+            <input type="tel" placeholder="(306) 555-0000"/>
+          </div>
+          <div class="form-group">
+            <label>WHAT ARE YOU LOOKING FOR?</label>
+            <div class="checkbox-grid">
+              <label class="checkbox-label"><input type="checkbox" name="services" value="website"/> <span class="dot dot-blue"></span> WEBSITE</label>
+              <label class="checkbox-label"><input type="checkbox" name="services" value="paid-ads"/> <span class="dot dot-yellow"></span> PAID ADS</label>
+              <label class="checkbox-label"><input type="checkbox" name="services" value="seo"/> <span class="dot dot-teal"></span> SEO</label>
+              <label class="checkbox-label"><input type="checkbox" name="services" value="automation"/> <span class="dot dot-yellow"></span> AUTOMATION</label>
+              <label class="checkbox-label"><input type="checkbox" name="services" value="consulting"/> <span class="dot dot-red"></span> CONSULTING</label>
+              <label class="checkbox-label"><input type="checkbox" name="services" value="full-package"/> <span class="dot dot-red"></span> FULL PACKAGE</label>
+              <label class="checkbox-label"><input type="checkbox" name="services" value="other"/> <span class="dot dot-grey"></span> OTHER</label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>TELL US ABOUT YOUR BUSINESS</label>
+            <textarea placeholder="What do you do, who are your customers, what's your biggest challenge right now?" rows="4"></textarea>
+          </div>
+          <button type="submit" class="btn-primary btn-full">SEND MY REQUEST</button>
+        </form>
+        <div class="form-success" id="form-success">
+          <p class="success-icon">✓</p>
+          <h3>Request sent!</h3>
+          <p>We'll be in touch within 24 hours. Talk soon.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

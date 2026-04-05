@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Dashboard — MMonark Digital</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+</head>
+<body class="dashboard-page">
+
+  <header class="dashboard-header">
+    <div class="dashboard-brand">
+      <span class="dashboard-logo"><span class="logo-mm">MMonark</span> Digital</span>
+      <span class="dashboard-label">Admin Dashboard</span>
+    </div>
+    <div class="dashboard-user">
+      <span id="admin-email">Admin: admin@mmonark.com</span>
+      <button class="btn-outline" onclick="logout()">Logout</button>
+    </div>
+  </header>
+
+  <nav class="dashboard-nav">
+    <button class="dash-tab active" onclick="showTab('analytics', this)">ANALYTICS</button>
+    <button class="dash-tab" onclick="showTab('projects', this)">PROJECTS</button>
+    <button class="dash-tab" onclick="showTab('users', this)">USERS</button>
+    <button class="dash-tab" onclick="showTab('inquiries', this)">INQUIRIES</button>
+  </nav>
+
+  <main class="dashboard-main">
+
+    <!-- ANALYTICS TAB -->
+    <div class="dash-panel" id="tab-analytics">
+      <div class="stats-cards">
+        <div class="dash-stat-card">
+          <p class="dash-stat-num" id="stat-users">0</p>
+          <p class="dash-stat-label">Total Users</p>
+        </div>
+        <div class="dash-stat-card">
+          <p class="dash-stat-num" id="stat-projects">0</p>
+          <p class="dash-stat-label">Total Projects</p>
+        </div>
+        <div class="dash-stat-card">
+          <p class="dash-stat-num" id="stat-pending">0</p>
+          <p class="dash-stat-label">Pending</p>
+        </div>
+        <div class="dash-stat-card">
+          <p class="dash-stat-num" id="stat-active">0</p>
+          <p class="dash-stat-label">Active</p>
+        </div>
+        <div class="dash-stat-card">
+          <p class="dash-stat-num" id="stat-completed">0</p>
+          <p class="dash-stat-label">Completed</p>
+        </div>
+      </div>
+      <div class="dash-two-col">
+        <div>
+          <h3 class="dash-section-title">Recent Users</h3>
+          <div id="recent-users-list" class="dash-list">
+            <p class="dash-empty">No users yet.</p>
+          </div>
+        </div>
+        <div>
+          <h3 class="dash-section-title">Recent Projects</h3>
+          <div id="recent-projects-list" class="dash-list">
+            <p class="dash-empty">No projects yet.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROJECTS TAB -->
+    <div class="dash-panel hidden" id="tab-projects">
+      <div class="dash-panel-header">
+        <h3 class="dash-section-title">All Projects</h3>
+        <button class="btn-primary btn-sm" onclick="openAddProject()">+ Add Project</button>
+      </div>
+      <table class="dash-table">
+        <thead>
+          <tr><th>Client</th><th>Service</th><th>Status</th><th>Started</th><th>Actions</th></tr>
+        </thead>
+        <tbody id="projects-tbody">
+          <tr><td colspan="5" class="dash-empty">No projects yet.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- USERS TAB -->
+    <div class="dash-panel hidden" id="tab-users">
+      <div class="dash-panel-header">
+        <h3 class="dash-section-title">All Users</h3>
+      </div>
+      <table class="dash-table">
+        <thead>
+          <tr><th>Name</th><th>Email</th><th>Role</th><th>Joined</th></tr>
+        </thead>
+        <tbody id="users-tbody">
+          <tr><td colspan="4" class="dash-empty">No users yet.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- INQUIRIES TAB -->
+    <div class="dash-panel hidden" id="tab-inquiries">
+      <div class="dash-panel-header">
+        <h3 class="dash-section-title">Project Inquiries</h3>
+      </div>
+      <div id="inquiries-list" class="dash-list">
+        <p class="dash-empty">No inquiries yet.</p>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ADD PROJECT MODAL -->
+  <div class="modal-overlay hidden" id="add-project-modal">
+    <div class="modal modal-sm">
+      <button class="modal-close" onclick="closeAddProject()">✕</button>
+      <div class="modal-inner">
+        <h3>Add New Project</h3>
+        <form onsubmit="addProject(event)">
+          <div class="form-group">
+            <label>CLIENT NAME</label>
+            <input type="text" id="proj-client" required/>
+          </div>
+          <div class="form-group">
+            <label>SERVICE</label>
+            <select id="proj-service">
+              <option>Web Design</option>
+              <option>Paid Ads</option>
+              <option>SEO</option>
+              <option>Automation</option>
+              <option>Full Package</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>STATUS</label>
+            <select id="proj-status">
+              <option>Pending</option>
+              <option>Active</option>
+              <option>Completed</option>
+            </select>
+          </div>
+          <button type="submit" class="btn-primary btn-full">ADD PROJECT</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/dashboard.js"></script>
+</body>
+</html>
